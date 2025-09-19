@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: lead-qualification-api
+    runtime: node
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3000
+      - key: OPENAI_API_KEY
+        sync: false # Set this in Render dashboard
+      - key: OPENAI_MODEL
+        value: gpt-4-turbo-preview
+      - key: LOG_LEVEL
+        value: info
+    healthCheckPath: /api/health
+    autoDeploy: true
