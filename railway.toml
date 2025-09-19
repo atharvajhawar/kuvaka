@@ -1,0 +1,20 @@
+[build]
+builder = "nixpacks"
+buildCommand = "npm install && npm run build"
+
+[deploy]
+startCommand = "npm start"
+healthcheckPath = "/api/health"
+healthcheckTimeout = 100
+restartPolicyType = "on-failure"
+restartPolicyMaxRetries = 10
+
+[[services]]
+name = "lead-qualification-api"
+type = "web"
+
+[services.env]
+NODE_ENV = "production"
+PORT = "3000"
+LOG_LEVEL = "info"
+OPENAI_MODEL = "gpt-4-turbo-preview"
