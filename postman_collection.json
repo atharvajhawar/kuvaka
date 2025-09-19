@@ -1,0 +1,120 @@
+{
+  "info": {
+    "_postman_id": "lead-qualification-api",
+    "name": "Lead Qualification API",
+    "description": "AI-powered lead qualification service",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/health",
+          "host": ["{{base_url}}"],
+          "path": ["api", "health"]
+        }
+      }
+    },
+    {
+      "name": "Create Offer",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"AI Outreach Automation\",\n  \"value_props\": [\n    \"24/7 automated outreach\",\n    \"6x more meetings booked\",\n    \"Personalized messaging at scale\"\n  ],\n  \"ideal_use_cases\": [\n    \"B2B SaaS mid-market\",\n    \"Enterprise sales teams\",\n    \"Growth-stage startups\"\n  ]\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/offer",
+          "host": ["{{base_url}}"],
+          "path": ["api", "offer"]
+        }
+      }
+    },
+    {
+      "name": "Get Offer",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/offer",
+          "host": ["{{base_url}}"],
+          "path": ["api", "offer"]
+        }
+      }
+    },
+    {
+      "name": "Upload Leads CSV",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/path/to/sample_leads.csv"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/api/leads/upload",
+          "host": ["{{base_url}}"],
+          "path": ["api", "leads", "upload"]
+        }
+      }
+    },
+    {
+      "name": "Score Leads",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/score",
+          "host": ["{{base_url}}"],
+          "path": ["api", "score"]
+        }
+      }
+    },
+    {
+      "name": "Get Results",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/results",
+          "host": ["{{base_url}}"],
+          "path": ["api", "results"]
+        }
+      }
+    },
+    {
+      "name": "Export CSV",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/export/csv",
+          "host": ["{{base_url}}"],
+          "path": ["api", "export", "csv"]
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:3000",
+      "type": "string"
+    }
+  ]
+}
