@@ -4,9 +4,9 @@ An intelligent lead qualification system that combines rule-based scoring with A
 
 ## 🚀 Live Demo
 
-- **Backend API**: [Deploy on Railway/Render/Vercel] (deployment pending)
-- **Frontend UI**: http://localhost:3001
-- **API Documentation**: http://localhost:3000
+- **Backend API**: https://lead-qualification-api-production-0cfe.up.railway.app
+- **Frontend UI**: http://localhost:3001 (run locally)
+- **API Documentation**: https://lead-qualification-api-production-0cfe.up.railway.app/api
 
 ## ✨ Features
 
