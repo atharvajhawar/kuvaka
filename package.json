@@ -8,8 +8,7 @@
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rm -rf dist",
-    "typecheck": "tsc --noEmit",
-    "postinstall": "npm run build"
+    "typecheck": "tsc --noEmit"
   },
   "keywords": [],
   "author": "",
@@ -23,16 +22,16 @@
     "multer": "^2.0.2",
     "openai": "^5.21.0",
     "winston": "^3.17.0",
-    "zod": "^3.25.76"
-  },
-  "description": "",
-  "devDependencies": {
+    "zod": "^3.25.76",
+    "typescript": "^5.9.2",
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.3",
     "@types/multer": "^2.0.0",
-    "@types/node": "^24.5.2",
+    "@types/node": "^24.5.2"
+  },
+  "description": "",
+  "devDependencies": {
     "nodemon": "^3.1.10",
-    "tsx": "^4.20.5",
-    "typescript": "^5.9.2"
+    "tsx": "^4.20.5"
   }
 }
